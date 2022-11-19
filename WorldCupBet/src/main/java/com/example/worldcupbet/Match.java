@@ -2,7 +2,6 @@ package com.example.worldcupbet;
 import java.util.ArrayList;
 
 public class Match {
-    private Game aGame;
     private String HomeTeam;
     private String AwayTeam;
     private double HomeOdds;
@@ -11,8 +10,8 @@ public class Match {
     private ArrayList<Bet> aBets;
     private int result;
 
-    public Match(String pHome, String pAway, double pHomeOdds, double pAwayOdds, double pTieOdds, Game pGame) {
-        aGame = pGame;
+    public Match(String pHome, String pAway, double pHomeOdds, double pAwayOdds, double pTieOdds) {
+
         HomeTeam = pHome;
         AwayTeam = pAway;
         HomeOdds = pHomeOdds;
@@ -24,6 +23,16 @@ public class Match {
     public double getAwayOdds() {
         return AwayOdds;
     }
+
+    public void setAwayOdds(double set) {AwayOdds = set;}
+
+    public void setHomeOdds(double set){HomeOdds = set;}
+
+    public void setTieOdds(double set){TieOdds = set;}
+
+    public void setHomeTeam(String set){HomeTeam = set;}
+
+    public void setAwayTeam(String set){AwayTeam = set;};
 
 
     public double getHomeOdds() {
@@ -53,6 +62,10 @@ public class Match {
     public String getHomeTeam() {
         return HomeTeam;
     }
+    public String getAwayTeam(){
+        return AwayTeam;
+    }
+    public ArrayList<Bet> get_bets(){return aBets;};
 
 
 }

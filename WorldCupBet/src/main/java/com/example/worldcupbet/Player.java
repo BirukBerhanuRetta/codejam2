@@ -51,6 +51,18 @@ public class Player {
         //aGame.update_ranking();
     }
 
+    public ArrayList<Bet> get_players_bet(Game game){
+        ArrayList<Bet> bets = new ArrayList<>();
+        for(Match match: game.aMatches){
+            for(Bet bet : match.get_bets()){
+                if(bet.getPlayer().getUsername() == getUsername()){
+                    bets.add(bet);
+                }
+            }
+        }
+        return bets;
+    }
+
     public String getUsername() {
         return Username;
     }
